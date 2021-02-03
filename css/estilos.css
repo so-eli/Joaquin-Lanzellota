@@ -1,0 +1,197 @@
+/*Estilo Básico*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: whitesmoke; /*color original whitesmoke*/
+  font-family: 'Montserrat', sans-serif;
+  }
+*::selection {
+    background:rgba(85, 107, 47,0.7);
+  }
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: sans-serif;
+  font-size: 16px; 
+}
+
+.titulo {
+  color: #444;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  text-shadow: 0px 5px 5px darkgrey;
+}
+header {
+  position: -webkit-sticky; /*-webkit- antes de sticky -- -webkit-sticky*/
+  position: sticky;
+  top: 0;
+  z-index: 1000; 
+}
+/*Inicio NAV*/
+nav {
+  background: whitesmoke;
+  letter-spacing: 3px;
+  font-weight: bold;margin: 0px;
+}
+button {
+  color: #444;
+}
+button:hover {
+  transform: scale(1.15);
+  transition: 0.5s;
+}
+ul {
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 0px;   
+}
+a {
+  color: #444;
+  text-decoration: none;
+}
+nav {
+  list-style-type: none;
+  margin: 0; 
+}
+.nav-logo:hover {
+  text-shadow: 2px 2px 10px darkslategray;
+  transform: scale(1.15);
+  transition: 0.5s;
+}
+.nav-item:hover {
+  text-shadow: 2px 2px 10px darkslategray;
+  transform: scale(1.15);
+  transition: 0.5s;  
+}
+a:hover, .item a:hover::after {
+  color: #444;
+  text-decoration: none;
+}
+/*Fin NAV*/
+/*Inicio INTRO*/
+.bloqueintro {
+    display: flex;
+    align-items: center;
+}
+#img-principal {
+  transform: scale(0.8);
+  justify-content: center;
+  align-content: center;
+  border-radius: 50%;
+}
+.textointro {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px darkgrey;
+}
+/*Fin INTRO*/
+/*Inicio Audiovisuales*/
+#audiovisuales, #musicales, #contacto{
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-shadow: 0px 5px 5px darkgrey;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.div-trabajos {
+  flex-grow: 1;
+  flex-basis: 300px;
+  max-width: 300px;
+}
+img {
+    box-sizing: content-box;
+    width: 100%;
+}
+.descripcion{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle ;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    box-sizing: content-box;
+    display: table;
+}
+.descripcion:hover {
+    opacity: 1;
+    transition: 0.4s;
+}
+.div-trabajos p{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display:table-cell;
+    vertical-align: middle;
+}
+.div-trabajos p:hover{
+    opacity: 1;
+    transition: 0.4s;
+}
+.div-trabajos {
+    width: 700px;
+    height: auto;
+    overflow: hidden;
+    margin: 10px;
+    flex-grow: 1;
+    flex-basis: 300px;
+    position: relative;
+    justify-content: center;
+    box-sizing: content-box;
+    vertical-align: middle;
+}
+.div-trabajos > .img-trabajos {
+    position:absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+/*Fin Audiovisuales*/
+/*Inicio Contacto*/
+.redes {
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+}
+.mail a {
+    size: 100px;
+    font-weight: bold;
+    color: rgba(85, 107, 47, 0.7);
+    letter-spacing: 3px;
+}
+.icons a {
+    font-size: 50px;
+    color: rgba(85, 107, 47,0.7);
+    padding: 5px;
+}
+.icons a :hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
+/*Fin Contacto*/
