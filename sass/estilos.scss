@@ -1,0 +1,335 @@
+$fondoLight: whitesmoke;
+$fondoDark: #222222;
+$verdeOliva: rgba(85, 107, 47, 0.7);
+$fontLight: #444;
+$sombraLight: 0px 5px 5px darkgrey;
+$fontDark: whitesmoke;
+$sombraDark: 0px 5px 5px rgba(0, 0, 0, 0.3);
+
+
+
+/*Estilo Básico*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+    &::selection {
+        background: $verdeOliva;
+      }
+  } 
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: sans-serif;
+    font-size: 16px;
+    transition: .3s ease all;
+    background: $fondoLight;
+
+    &.dark {
+		background: $fondoDark;
+        color: $fontDark;
+	}
+    body.dark & {
+		background: $fondoDark;
+        color: $fontDark;
+        
+		a {
+			color: $fondoDark;
+			&:hover {
+				color: white;
+			}
+		}
+     }
+  }
+  
+  .titulo {
+    color: $fontLight;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-shadow: $sombraLight;
+
+    body.dark & {
+      color: $fontDark;
+      text-shadow: $sombraDark;
+  }
+}
+  
+  header {
+    position: -webkit-sticky;
+    /*-webkit- antes de sticky -- -webkit-sticky*/
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  // ----- ----- ----- ----- ----- Switch ----- ----- ----- ----- ----- 
+.switch {
+	background: #343D5B;
+	border-radius: 1000px;
+	border: none;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	outline: none;
+
+	&::after {
+		content: ""; /*esto es para que puedan funcionar los demas estilos*/
+		display: block;
+		width: 20px;
+		height: 20px;
+		position: absolute; /*esto es que para cuando hagamos click el botoncito se corra*/
+		background: #F1F1F1;
+		top: 0;
+		left: 0;
+		right: unset;/*que no esté seteada es para que cuando apretemos, se mueva para el otro lado*/
+		border-radius: 100px;
+		transition: .3s ease all;
+		box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
+	}
+	&.active {
+		background: orange;
+		color: black;
+		&::after {
+			right: 0;
+			left: unset;
+		}
+	}
+	span {
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		display: block;
+		background: none;
+		color: #fff;
+	}
+}
+
+  /*Inicio NAV*/
+  nav {
+    background: $fondoLight;
+    letter-spacing: 3px;
+    font-weight: bold;
+    margin: 0px;
+
+    body.dark & {
+        background: $fondoDark;
+        text-shadow: $sombraDark;
+        color: $fontDark;
+        box-shadow: $sombraDark;
+    }
+    
+  }
+  
+  button {
+    color:$fontLight;
+
+    body.dark & {
+     color: $fontDark;
+    }
+  }
+
+  button:hover {
+    transform: scale(1.15);
+    transition: 0.5s;
+  }
+  
+  ul {
+    text-align: center;
+    justify-content: space-evenly;
+    padding: 0px;
+  }
+  
+  a {
+    color: $fontLight;
+    text-decoration: none;
+
+    body.dark & {
+        background: $fondoDark; 
+        color: $fontDark;
+    }
+  }
+  
+  nav {
+    list-style-type: none;
+    margin: 0;
+  }
+  
+  .nav-logo:hover {
+    text-shadow: 2px 2px 10px darkslategray;
+    transform: scale(1.15);
+    transition: 0.5s;
+  }
+  
+  .nav-item:hover {
+    text-shadow: 2px 2px 10px darkslategray;
+    transform: scale(1.15);
+    transition: 0.5s;
+  }
+  
+  a:hover, .item a:hover::after {
+    color: $fontLight;
+    text-decoration: none;
+  }
+  
+  /*Fin NAV*/
+  /*Inicio INTRO*/
+  .bloqueintro {
+    display: flex;
+    align-items: center;
+  }
+  
+  #img-principal {
+    transform: scale(0.8);
+    justify-content: center;
+    align-content: center;
+    border-radius: 50%;
+  }
+  
+  .textointro {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px darkgrey;
+
+    body.dark & { 
+      text-shadow: $sombraDark;
+      color: $fontDark;
+  }
+  }
+  
+  /*Fin INTRO*/
+  /*Inicio Audiovisuales*/
+  #audiovisuales, #musicales, #contacto {
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding: 20px;
+    font-weight: bolder;
+    letter-spacing: 5px;
+    text-shadow: 0px 5px 5px darkgrey;
+
+    body.dark & { 
+      text-shadow: $sombraDark;
+      color: $fontDark;
+  }
+  }
+  
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+   justify-content: center;
+  }
+  
+  .div-trabajos {
+    flex-grow: 1;
+    flex-basis: 300px;
+    max-width: 300px;
+  }
+  
+  img {
+    box-sizing: content-box;
+    width: 100%;
+  }
+  
+  .descripcion {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    box-sizing: content-box;
+    display: table;
+  }
+  
+  .descripcion:hover {
+    opacity: 1;
+    transition: 0.4s;
+  }
+  
+  .div-trabajos p {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-weight: bold;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .div-trabajos p:hover {
+    opacity: 1;
+    transition: 0.4s;
+  }
+  
+  .div-trabajos {
+    width: 700px;
+    height: auto;
+    overflow: hidden;
+    margin: 10px;
+    flex-grow: 1;
+    flex-basis: 300px;
+    position: relative;
+    justify-content: center;
+    box-sizing: content-box;
+    vertical-align: middle;
+  }
+  
+  .div-trabajos > .img-trabajos {
+    position: absolute;
+    left: -100%;
+    right: -100%;
+    top: -100%;
+    bottom: -100%;
+    margin: auto;
+    min-height: 100%;
+    min-width: 100%;
+    box-sizing: border-box;
+    vertical-align: middle;
+  }
+  
+  /*Fin Audiovisuales*/
+  /*Inicio Contacto*/
+  .redes {
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+
+    body.dark & { 
+      text-shadow: $sombraDark;
+      color: $fontDark;
+  }
+  }
+  
+  .mail a {
+    size: 100px;
+    font-weight: bold;
+    color: $verdeOliva;
+    letter-spacing: 3px;
+  }
+  
+  .icons a {
+    font-size: 50px;
+    color: $verdeOliva;
+    padding: 5px;
+  }
+  
+  .icons a :hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+  
+  /*Fin Contacto*/
